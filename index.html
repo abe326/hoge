@@ -4,56 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>占いシステム</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+        }
+
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
         #result {
             margin-top: 20px;
             font-weight: bold;
+            color: #555;
         }
     </style>
 </head>
 <body>
 
-    <h1>あなたの運勢を占います</h1>
-    <label for="birthDate">生年月日を入力してください（YYYY-MM-DD）:</label>
-    <input type="date" id="birthDate">
-    <button onclick="handleSubmit()">占う</button>
-
-    <div id="result"></div>
+    <div class="container">
+        <h1>運勢占い</h1>
+        <label for="birthDate">生年月日を入力してください:</label>
+        <input type="date" id="birthDate">
+        <button onclick="handleSubmit()">占う</button>
+        <div id="result"></div>
+    </div>
 
     <script>
         function getZodiacSign(birthDate) {
             const month = birthDate.getMonth() + 1;
             const day = birthDate.getDate();
 
-            // 12通りの結果をここに定義
             if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) {
-                return "あなたは牡羊座です。情熱的で行動力があります。";
+                return "あなたは牡羊座です。";
             } else if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) {
-                return "あなたは牡牛座です。安定を重視し、忍耐強いです。";
+                return "あなたは牡牛座です。";
             } else if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) {
-                return "あなたは双子座です。好奇心旺盛で社交的です。";
+                return "あなたは双子座です。";
             } else if ((month === 6 && day >= 21) || (month === 7 && day <= 22)) {
-                return "あなたは蟹座です。感受性豊かで家庭的です。";
+                return "あなたは蟹座です。";
             } else if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) {
-                return "あなたは獅子座です。自信に満ちていて、リーダーシップがあります。";
+                return "あなたは獅子座です。";
             } else if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) {
-                return "あなたは乙女座です。分析力があり、実務的です。";
+                return "あなたは乙女座です。";
             } else if ((month === 9 && day >= 23) || (month === 10 && day <= 22)) {
-                return "あなたは天秤座です。バランスを重視し、社交的です。";
+                return "あなたは天秤座です。";
             } else if ((month === 10 && day >= 23) || (month === 11 && day <= 21)) {
-                return "あなたは蠍座です。情熱的で神秘的です。";
+                return "あなたは蠍座です。";
             } else if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) {
-                return "あなたは射手座です。自由を求め、冒険心があります。";
+                return "あなたは射手座です。";
             } else if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
-                return "あなたは山羊座です。責任感が強く、計画的です。";
+                return "あなたは山羊座です。";
             } else if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) {
-                return "あなたは水瓶座です。独創的で自由な精神を持っています。";
+                return "あなたは水瓶座です。";
             } else {
-                return "あなたは魚座です。感受性が強く、夢見がちです。";
+                return "あなたは魚座です。";
             }
         }
 
