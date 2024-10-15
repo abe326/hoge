@@ -28,16 +28,17 @@
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             padding: 30px;
-            width: 300px;
+            width: 320px; /* 幅を調整 */
             text-align: center;
         }
 
         input[type="date"] {
             width: 100%;
-            padding: 10px;
+            padding: 8px; /* パディングを調整 */
             border: 1px solid #ddd;
             border-radius: 4px;
             margin-bottom: 15px;
+            font-size: 16px; /* フォントサイズを調整 */
         }
 
         button {
@@ -49,6 +50,7 @@
             cursor: pointer;
             transition: background-color 0.3s;
             width: 100%;
+            font-size: 16px; /* フォントサイズを調整 */
         }
 
         button:hover {
@@ -78,29 +80,29 @@
             const day = birthDate.getDate();
 
             if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) {
-                return "あなたは牡羊座です。";
+                return "あなたは牡羊座です。情熱的で行動力があります。";
             } else if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) {
-                return "あなたは牡牛座です。";
+                return "あなたは牡牛座です。安定を重視し、忍耐強いです。";
             } else if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) {
-                return "あなたは双子座です。";
+                return "あなたは双子座です。好奇心旺盛で社交的です。";
             } else if ((month === 6 && day >= 21) || (month === 7 && day <= 22)) {
-                return "あなたは蟹座です。";
+                return "あなたは蟹座です。感受性豊かで家庭的です。";
             } else if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) {
-                return "あなたは獅子座です。";
+                return "あなたは獅子座です。自信に満ちていて、リーダーシップがあります。";
             } else if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) {
-                return "あなたは乙女座です。";
+                return "あなたは乙女座です。分析力があり、実務的です。";
             } else if ((month === 9 && day >= 23) || (month === 10 && day <= 22)) {
-                return "あなたは天秤座です。";
+                return "あなたは天秤座です。バランスを重視し、社交的です。";
             } else if ((month === 10 && day >= 23) || (month === 11 && day <= 21)) {
-                return "あなたは蠍座です。";
+                return "あなたは蠍座です。情熱的で神秘的です。";
             } else if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) {
-                return "あなたは射手座です。";
+                return "あなたは射手座です。自由を求め、冒険心があります。";
             } else if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
-                return "あなたは山羊座です。";
+                return "あなたは山羊座です。責任感が強く、計画的です。";
             } else if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) {
-                return "あなたは水瓶座です。";
+                return "あなたは水瓶座です。独創的で自由な精神を持っています。";
             } else {
-                return "あなたは魚座です。";
+                return "あなたは魚座です。感受性が強く、夢見がちです。";
             }
         }
 
