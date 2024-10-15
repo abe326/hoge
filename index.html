@@ -24,7 +24,7 @@
         async function getHoroscope() {
             const dateInput = document.getElementById('date').value;
             const dateFormatted = dateInput.replace(/-/g, '/');
-            const apiUrl = `http://api.jugemkey.jp/api/horoscope/free/${dateFormatted}`;
+            const apiUrl = `https://api.jugemkey.jp/api/horoscope/free/${dateFormatted}`;
             
             try {
                 const response = await fetch(apiUrl);
